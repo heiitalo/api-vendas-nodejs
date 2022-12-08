@@ -24,6 +24,7 @@ class CreateProductService {
       quantity,
     });
 
+
     await productsRepository.save(product);
 
     return product;
