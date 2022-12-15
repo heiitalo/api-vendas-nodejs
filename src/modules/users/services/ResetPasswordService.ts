@@ -33,6 +33,8 @@ class ResetPasswordService {
       throw new AppError('Token expired.')
     }
     user.password = await hash(password, 8);
+
+    await usersRepository.save(user);
   }
 }
 
